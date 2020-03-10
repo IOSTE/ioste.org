@@ -1,0 +1,301 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="International Organization for Science and Technology Education">
+  <title>IOSTE - International Organization for Science and Technology Education</title>
+
+  <style>
+
+    html { 
+      margin: 1em;
+    }
+
+    @media (min-width: 600px) {
+      html {
+        margin: 2em;
+      }
+    }
+
+    body {
+      background-color: #fff;
+      color: #000;
+      font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    h1, h2 {
+      font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif;
+      font-size: 1em;
+      color: #000;
+    }
+
+    h1 { 
+      margin-top: 0; 
+    }
+
+    h2 { 
+      margin-top: 2em; 
+    }
+
+    img {
+      max-width: 100%;
+      vertical-align: middle;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: #528f8e;
+    }
+
+    a:hover { text-decoration: underline; }
+
+    section { 
+      max-width: 30em; 
+    }
+
+    @media (min-width: 400px) {
+      ul li { display: flex; }
+      ul li span { display: block; width: calc(100% - 6em);}
+      ul li span:first-child { width: 6em; }
+    }
+
+    @media (min-width: 600px) {
+      body {
+        margin: 1em;
+        font-size: 17px;
+      }
+    }
+
+    @media (min-width: 1200px) {
+
+      body {
+        margin: 2em;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 4em;
+        max-width: 70em;
+        font-size: 19px;
+      }
+
+      section > h2:first-child { 
+        margin-top: 0; 
+      }
+
+    }
+
+    @media (min-width: 1000px) {
+
+      body { 
+        margin: 3em; grid-gap: 6em; 
+      }
+
+    }
+
+    .Logo {
+      position: absolute;
+      display: block;
+      top: 1em;
+      right: 1em;
+      left: auto;
+
+      width: 34px;
+
+      transform: will-change;
+      -webkit-transition: -webkit-transform 1200ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+                      transition: transform 1200ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+    }
+
+    .Logo:hover {
+      -webkit-transform: rotate(360deg) scale(1.2);
+              transform: rotate(360deg) scale(1.2);
+    }
+
+    @media (min-width: 600px) {
+      .Logo {
+        width: 38px;
+      }
+    }
+
+    @media (min-width: 800px) {
+      .Logo {
+        right: 1em;
+        left: auto;
+      }
+    }
+
+    .Board {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .Board-member {
+      display: block;
+      margin-bottom: 1em;
+      width: 48%;
+    }
+
+    .Board-member > img {
+      display: block;
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    .Board-member:nth-child(3),
+    .Board-member:nth-child(4) {
+      margin-bottom: 0;
+    }
+
+    .Board-memberName {
+      margin: .5em 0 0 0;
+      font-size: 1em;
+    }
+
+    .Board-memberTitle {
+      margin: 0;
+    }
+
+    .Board-memberUniversity {
+      margin: 0;
+      font-size: .9em;
+    }
+
+    .Board-memberEmail {
+      font-size: .9em;
+    }
+
+    .Gallery {
+      display: flex;
+    }
+
+    .Gallery > div {
+      transform: will-change;
+      transition: transform 600ms cubic-bezier(0.19, 1, 0.22, 1) 0ms, height 600ms cubic-bezier(0.19, 1, 0.22, 1) 0ms;
+    }
+
+    .Gallery > div:first-child {
+      margin-right: .5em;
+    }
+
+    .Gallery > div:hover {
+      transform: scale(1.2);
+    }
+
+    .Newsletter {
+      position: relative;
+    }
+
+    .Newsletter .inputwrap {
+      display: flex;
+    }
+
+    .Newsletter input[type="email"] {
+      display: block;
+      margin-right: 1em;
+      padding: .75em 1em;
+
+      width: 100%;
+
+      font-size: 1em;
+      line-height: 1;
+      text-align: center;
+
+      background: #fff;
+      border: 2px solid #000;
+    }
+
+    .Newsletter input[type="submit"] {
+      display: block;
+      padding: .75em 1em;
+      width: auto;
+
+      font-size: 1em;
+      line-height: 1;
+      text-align: center;
+      color: #fff;
+
+      cursor: pointer;
+      outline: none;
+      background: #000;
+      border: 2px solid #000;
+    }
+
+    .Pattern {
+      position: fixed;
+      display: block;
+      bottom: 0;
+      left: 0;
+      
+      width: 2.2em;
+      height: 100%;
+
+      background: url("../pattern.svg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    @media (max-width: 1200px) {
+      .Pattern {
+        display: none;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <section>
+
+    <span class="Logo"><img src="../ioste.gif"></span>
+
+    <time><small>9/3/2020</small></time>
+
+    <p><em>Dear IOSTE members,</em></p>
+
+    <p>As you might expect, we take the implications of COVID-19 very seriously. In parallel to our concerns for the wellbeing of our network members, we do not want to accelerate a sense of panic. We would like to inform you that due to the health emergency concerns about the outbreak of the novel coronavirus (COVID-19), IOSTE has decided to postpone the deadline for submission to 11 April 2020, to have a clearer scenario about the situation around the world.</p>
+
+    <p>In view of this the IOSTE 2020 Symposium is scheduled to 23-28 August 2020 in Daegu, Korea. We hope to have a better situation at the end of March when the executive board and local organizers will analyse and decide about alternative arrangements of the 2020 Symposium under consideration. You will all be informed subsequently.</p>
+
+    <p>Also it is time to reinforce the IOSTE role to promote Science and Technology Education for better understanding about science for all to avoid fake news, prejudices, xenophobia and hate speech, i.e. as it has been seen against people and countries in the context of Covid-19.</p>
+
+    <p>We express our solidarity to all those that are affected by this global problem.</p>
+
+    <p><em>All the best,
+      <br>Yours sincerely</em>
+    </p>
+
+    <p><strong>Agnaldo Arroio</strong>
+      <br>Chair, IOSTE Executive board
+    </p>
+
+    <p><strong>Hae-Ae Seo</strong>
+      <br><strong>Youngjoon Shin</strong>
+      <br>Chair, 2020 IOSTE Symposium
+    </p>
+
+  </section>
+
+  <section>
+
+    <p>Useful links</p>
+    <p>
+      <a href="https://www.who.int/health-topics/coronavirus" rel="noopener noreferrer" target="_blank">World Health Organization: WHO</a><br>
+      <a href="https://www.ecdc.europa.eu/en/novel-coronavirus-china" rel="noopener noreferrer" target="_blank">European Centre for Disease Prevention and Control</a><br>
+    </p>
+
+  </section>
+
+  <span class="Pattern"></span>
+</body>
+</html>
