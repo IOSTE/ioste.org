@@ -98,7 +98,7 @@
 
     }
 
-    body > section:nth-child(2) {
+    body > section:nth-of-type(2) {
       padding: 1.4444vw;
       background: rgba(14, 147, 144, .06);
       border: 1px solid rgba(14, 147, 144, .20);
@@ -271,9 +271,69 @@
       border-radius: 3px;
     }
 
+    #war {
+      display: grid;
+      place-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      overflow-y: scroll;
+      background-color: #005BBB;
+      z-index: 9;
+    }
+
+    #war > div:first-of-type {
+      padding-left: 1em;
+      padding-right: 1em;
+      max-width: 30em;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    #war-end {
+      margin-top: 2em;
+      margin-bottom: 2em;
+      color: #fff;
+      cursor: pointer;
+      -webkit-appearance: none;
+      font-size: 1.125em;
+      border: 1px solid #fff;
+      background-color: transparent;
+      padding: 9px 13px;
+      border-radius: 20px;
+    }
+
   </style>
 </head>
 <body>
+
+  <div id="war">
+    <div>
+      <p><strong>IOSTE statement about situation in Ukraine 🇺🇦</strong></p>
+      <p>The International Organization for Science and Technology Education (IOSTE) declares itself appalled by the invasion of Ukraine in a clear violation of international law, territorial integrity and the sovereignty of Ukraine. In the face of such brutality by Russia against an independent and sovereign state, we would like to extend our solidarity and support to the Ukrainian people.</p>
+      <p>Part of the mission of IOSTE is to encourage the “peaceful and ethical use of science and technology in the service of humankind.”</p>
+      <p>In accordance with our organizational mission and values, we call for an immediate end to the Russian invasion and the restoration of the territorial integrity of Ukraine and peace for the Ukrainian people. We join other organizations in the education and research communities in condemning this invasion, including Education International (<a href="https://www.csee-etuce.org/images/Statements/2022-02_Joint_EI-ETUCE_Statement_Ukraine.pdf" target="_blank">https://www.csee-etuce.org/images/Statements/2022-02_Joint_EI-ETUCE_Statement_Ukraine.pdf</a>).</p>
+      <p>As part of its mission, IOSTE also encourages international collaboration in the domains of research and development and promotes cooperation with other international organizations. And at this moment, Ukrainian researchers and teachers are fighting for their lives and for their country and do not have a peaceful environment to promote scientific and technological education that contributes to the promotion of peace, equity and social justice.</p>
+      <p>Faced with the barbaric acts of an unjustified war, with the destruction of schools and kindergartens, victimizing the civilian population including children, we reiterate our solidarity and support to Ukrainian teachers and researchers, including their families and the Ukrainian community in general.</p>
+      <p>As an international organization that promotes science and technology education, we will continue to foster a space to promote cultural diversity, mutual understanding, and human values and defend peace, democracy and social justice.</p>
+      <p>#Slava Ukraini! 🇺🇦</p>
+    </div>
+
+    <div>
+      <button id="war-end">Continue to IOSTE website →</button>
+    </div>
+  </div>
+
+  <script>
+    const war = document.querySelector('#war');
+    const end = document.querySelector('#war-end');
+
+    end.addEventListener('click', () => {
+      war.style.display = 'none';
+    });
+  </script>
 
   <section>
 
@@ -354,9 +414,7 @@
 
   <section>
 
-    <h2>Upcoming symposium
-      <!--<a href="http://www.ioste2020korea.kr/" style="display:inline-block;background:#f4b334;color:#000;font-size:15px;font-weight:500;padding:2px 6px;border-radius:4px; text-decoration: none" rel="noopener noreferrer" target="_blank">visit website</a>-->
-    </h2>
+    <h2>Upcoming symposium • <a href="http://www.ioste2022.com/" target="_blank" style="font-weight: normal">ioste2022.com</a></h2>
     <p>XX Symposium of the IOSTE will be held in Federal University of Pernambuco, Recife, Brazil.</p>
     <p>&quot;<em>Esperançar</em> in uncertainty times: the role of science and technology education in/for a changing world&quot;</p>
     <p>Date: <strong>July 25-29, 2022</strong>.</p>
